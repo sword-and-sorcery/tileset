@@ -15,8 +15,8 @@ class Tileset(ConanFile):
            "revision": "auto"}
 
     def requirements(self):
-        self.requires("rapidxml/1.13@bincrafters/stable")
-        self.requires("boost/1.69.0@conan/stable")
+        self.requires("rapidxml/1.13@bincrafters/stable", private=True)
+        self.requires("boost/1.69.0@conan/stable", private=True)
 
     def build(self):
         cmake = CMake(self)
