@@ -4,10 +4,15 @@ project(sword_and_sorcery)
 include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
+set(CMAKE_CXX)
+
 set(SOURCES src/tileset.cpp)
 # set(HEADERS include/tile.h include/tileset.h)
 
 add_library(tileset ${SOURCES})
+set_target_properties(tileset PROPERTIES CXX_STANDARD 17)
+target_link_libraries(tileset PUBLIC CONAN_PKG::rapidxml CONAN_PKG::boost)
+
 target_include_directories(
     tileset PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
