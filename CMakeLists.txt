@@ -4,8 +4,6 @@ project(sword_and_sorcery)
 include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
-set(CMAKE_CXX)
-
 set(SOURCES src/tileset.cpp)
 # set(HEADERS include/tile.h include/tileset.h)
 
