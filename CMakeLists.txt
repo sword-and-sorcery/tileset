@@ -24,8 +24,8 @@ install(
 install(
     EXPORT tileset-config
     NAMESPACE tileset::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/tileset)
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
 
 install(
     DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tileset)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})

@@ -1,5 +1,5 @@
 
-#include "tileset.h"
+#include "tileset/tileset.h"
 #include <rapidxml.hpp>
 #include <rapidxml_utils.hpp>
 
@@ -29,6 +29,7 @@ namespace assets {
         pImpl->image = other.pImpl->image;
         pImpl->unit = other.pImpl->unit;
         pImpl->_tiles = other.pImpl->_tiles;
+        return *this;
     }
 
     tileset tileset::load(const std::string &assets) {
