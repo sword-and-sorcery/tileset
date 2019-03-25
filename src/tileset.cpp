@@ -23,6 +23,14 @@ namespace assets {
 
     tileset::~tileset() {}
 
+    tileset& tileset::operator=(const tileset& other) {
+        pImpl->name = other.pImpl->name;
+        pImpl->url = other.pImpl->url;
+        pImpl->image = other.pImpl->image;
+        pImpl->unit = other.pImpl->unit;
+        pImpl->_tiles = other.pImpl->_tiles;
+    }
+
     tileset tileset::load(const std::string &assets) {
         rapidxml::file<> xmlFile(assets.c_str());
         rapidxml::xml_document<> doc;
