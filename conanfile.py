@@ -34,5 +34,8 @@ class Tileset(ConanFile):
         cmake.build()
         cmake.install()
 
+    def package(self):
+        self.copy("LICENSE", dst="licenses")
+
     def package_info(self):
         self.cpp_info.libs = ["tileset",]
