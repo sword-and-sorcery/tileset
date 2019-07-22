@@ -15,17 +15,3 @@ target_include_directories(
     tileset PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-
-install(
-    TARGETS tileset
-    EXPORT tileset-config
-    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
-
-install(
-    EXPORT tileset-config
-    NAMESPACE tileset::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
-
-install(
-    DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
