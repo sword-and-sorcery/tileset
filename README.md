@@ -1,5 +1,7 @@
 # tileset
 
+> ⚠️ **Full docs**: https://sword-and-sorcery.github.io/sword-and-sorcery/
+
 Provides classes to handle tiles and tilesets
 
 ```
