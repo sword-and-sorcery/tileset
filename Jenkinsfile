@@ -20,7 +20,7 @@ node {
 
         stage("Upload packages") {
             String uploadCommand = "upload ui-tileset* --all -r ${remoteName} --confirm"
-            def b = client.run(command: command)
+            def b = client.run(command: uploadCommand)
             b.env.collect()
             server.publishBuildInfo b
         }
