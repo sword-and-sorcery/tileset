@@ -3,7 +3,7 @@ def artifactory_repo = "conan-local"
 String docker_image = "conanio/gcc8"
 
 node {
-    docker.image(docker_image).inside('-v /tmp/:/tmp/ --net=host') {
+    docker.image(docker_image).inside('-v /tmp:/tmp --net=jenkins_artifactory') {
         def server = Artifactory.server artifactory_name
         def client = Artifactory.newConanClient()
         def remoteName = client.remote.add server: server, repo: artifactory_repo
